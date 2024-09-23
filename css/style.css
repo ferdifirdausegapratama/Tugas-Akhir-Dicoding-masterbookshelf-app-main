@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: hsl(217, 68%, 41%);
+  --gray: hsl(216, 11%, 35%);
+  --bg-body: rgb(97, 122, 147);
+  --paragraph-color: rgb(11, 12, 12);
+  --dark: rgb(15, 23, 42);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-body);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--paragraph-color);
+}
+
+.head_bar {
+  font-weight: bold;
+  color: rgb(9, 9, 9);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5f7279;
+}
+
+footer {
+  padding: 20px;
+  color: rgb(9, 9, 9);
+  background-color: #5f7279;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wrapper {
+  width: min(100% - 4rem, 1000px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.top,
+.bottom {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.form-container,
+.cari-container,
+.left-container,
+.right-container {
+  padding: 2rem;
+  background: #715e5e;
+  border-radius: rem;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.form-container {
+  width: 90%;
+}
+
+.cari-container {
+  width: 40%;
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.form-group input {
+  border: 1px solid var(--gray);
+  padding:1rem;
+  border-radius: 5rem;
+  width: 100%;
+  font-size: auto;
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  left: 1rem;
+  top: 100%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  transition: 0.3s;
+  cursor: text;
+}
+
+.form-group input:not(:placeholder-shown),
+.form-group input:focus {
+  border: 2px solid var(--primary);
+}
+
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group input:focus ~ label {
+  top: 0;
+  left: 0.80rem;
+  color: var(--primary);
+  padding: 0 0.30rem;
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+.form-search-bottom {
+  display: flex;
+  justify-content: end;
+  gap: 0.25rem;
+}
+
+.submit-btn {
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 500;
+  float: right;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.submit-btn:hover,
+.cari-btn:hover {
+  background-color: hsl(218, 11%, 14%);
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.30rem;
+}
+
+.form-check label {
+  color: var(--primary);
+}
+
+.form-check input,
+.form-check label {
+  cursor: pointer;
+}
+
+.item {
+  border: 1px solid var(--gray);
+  border-radius: 1rem;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.item-title {
+  color: var(--primary);
+}
+
+.item-title span {
+  color: var(--paragraph-color);
+}
+
+.item-writer {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.item-action {
+  display: flex;
+  gap: 0.30rem;
+}
+
+.hapus-btn,
+.selesai-btn,
+.kembalikan-btn,
+.reset-btn,
+.cari-btn {
+  padding: 0.30rem 0.7rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #fff;
+  font-size: 1.30rem;
+  border-radius: 0.30rem;
+}
+
+.cari-btn {
+  background-color: var(--primary);
+}
+
+.reset-btn {
+  background-color: var(--gray);
+}
+
+.reset-btn:hover {
+  background-color: hsl(215, 20%, 55%);
+}
+
+.hapus-btn {
+  background-color: #201e1e;
+}
+
+.hapus-btn:hover {
+  background-color: hsl(0, 6%, 7%);
+}
+
+.selesai-btn {
+  background-color: #0bde58;
+}
+
+.selesai-btn:hover {
+  background-color: #0bde58;
+}
+
+.kembalikan-btn {
+  background-color: #a3840b;
+}
+
+.kembalikan-btn:hover {
+  background-color: hsl(48, 77%, 34%);
+}
+
+.alert {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  color: #8d3939;
+  z-index: 100;
+  background-color: #1e2621;
+  transition: 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 572px) {
+  .top,
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .cari-container {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
